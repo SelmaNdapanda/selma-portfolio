@@ -6,24 +6,39 @@ import styled from 'styled-components';
 
 let data = [
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661324124/Yt-portfolio/ui5_mnvdaw.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "https://res.cloudinary.com/dj1p87c0e/image/upload/v1682581004/traveller_aadenz.png",
+        title :"Traveller's Hub",
+        disc : "This is a travel booking app where user can register new accounts to book different trip packages, add and delete packages. It is built and connected by using two different repositories, including the back end (Rails) and the front end (React/Redux)",
+        live : "https://travelers-hub-front.onrender.com",
+        source :"https://github.com/SelmaNdapanda/travelers_hub_back-end"
     },
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661324074/Yt-portfolio/ui4_jku3ol.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "https://res.cloudinary.com/dj1p87c0e/image/upload/v1682582420/SpaceX_lej5ex.png",
+        title :"Space X Traveller's Hub",
+        disc : "This is a web-based app for a company that provides commercial and scientific space travel services, that allows you to: book rockets, cancel reservations, join selected space missions and leave them. It is build with React, Redux, and API",
+        live : "https://spacex-travellers-hub.netlify.app",
+        source :"https://github.com/SelmaNdapanda/Space-X-Traveller-s-Hub"
     },
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661323981/Yt-portfolio/ui2_wtollo.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "https://res.cloudinary.com/dj1p87c0e/image/upload/v1682583553/bookStore_ufmiij.png",
+        title :"BookStore",
+        disc : "This is a web-based application with the functionality of adding a new book, displaying books added based on the data fetched from the API, and deleting a selected book. It is built with React, and Redux and API", 
+        live : "https://bookstore-web-app.netlify.app",
+        source :"https://github.com/SelmaNdapanda/BookStore"
     },
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661323980/Yt-portfolio/ui3_akynn4.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "https://res.cloudinary.com/dj1p87c0e/image/upload/v1682587265/pyladies_bie9te.png",
+        title :"PyLadies Workshop",
+        disc : "PyLadies Namibia Workshop 2023, is a workshop website built for Namibian Ladies in tech. It is built using both the mobile-first version and the Desktop version. It shows the home page and the about page. It is built using HTML, CSS, and JavaScript for dynamic web pages.",
+        live : "https://pyladies-namibia.netlify.app",
+        source :"https://github.com/SelmaNdapanda/Pyladies-Namibia-Workshop"
     },
     {
-        img : "https://res.cloudinary.com/ghazni/image/upload/v1661323979/Yt-portfolio/ui1_n3uiaz.png",
-        disc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Eveniet iure rerum obcaecati et laborum earum!"
+        img : "https://res.cloudinary.com/dj1p87c0e/image/upload/v1682588004/Covid-19_q0hcaf.png",
+        title :"Covid-19 Tracking",
+        disc : " This is a mobile web application that collects information from an API to provide comprehensive data for the novel coronavirus in the world. Built with React and Redux.",
+        live : "https://covid19-tracking-app1.netlify.app",
+        source :"https://github.com/SelmaNdapanda/Covid-19-Tracking-App"
     }
 ];
 
@@ -102,7 +117,7 @@ const Buttons = styled.div`
     height: 2rem;
     background-color: rgba(255, 255, 255, 0.100);
     cursor: pointer;
-    color: #01be96;
+    color: #db7093;
     border: none;
     position: absolute;
     top: 45%;
@@ -111,5 +126,10 @@ const Buttons = styled.div`
 
   .back{
     left: -1rem;
+  }
+
+  a{
+    margin-left: 0.4rem;
+    color: red;
   }
 `

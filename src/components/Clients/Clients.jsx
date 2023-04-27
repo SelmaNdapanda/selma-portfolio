@@ -7,15 +7,22 @@ import { Slide } from 'react-awesome-reveal';
 
 let clients = [
     {
-        name : "John Michel",
-        position : "web developer",
-        img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
-        stars : 3,
-        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+        name : "Yonas Tesfu",
+        position : "Full-stack Developer",
+        img_url : "https://avatars.githubusercontent.com/u/72081991?v=4",
+        stars : 5,
+        disc : `I am writing to recommend Selma Hamutenya with whom I have had the pleasure of working with on 
+        several web development projects, and I can confidently say that she is an exceptional developer.
+        Selma is a highly skilled web developer with expertise in a variety of web development technologies 
+        and frameworks. She is able to create elegant and efficient code that is both functional and aesthetically pleasing. 
+        She has a keen eye for design and is able to implement user-friendly interfaces that are easy to navigate. What sets 
+        Selma apart, however, is her work ethic and her ability to work collaboratively with others. She is always willing 
+        to go the extra mile to ensure that projects are completed on time and to the highest possible standard. 
+        She is an excellent communicator who is able to explain complex technical concepts in a way that is easy for 
+        team members to understand. She is also a supportive team member who is always willing to offer feedback and advice to others.`
     },
     {
-        name : "John Michel",
+        name : "Justice Bajeri",
         position : "web developer",
         img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
         stars : 4,
@@ -83,8 +90,8 @@ const Clients = () => {
   return (
     <Container id='client'>
         <Slide direction="left">
-            <span className="green">testimonials</span>
-            <h1>what clients say</h1>
+            <span className="green">Testimonials & Recommendations</span>
+            <h1>what clients and peers say</h1>
         </Slide>
         <Testimonials>
             <Slider ref={arrowRef} {...settings}>
@@ -149,7 +156,7 @@ const Container = styled.div`
     }
     
     .slick-dots li.slick-active button{
-        background: #01be96;
+        background: #db7093;
         width: 15px;
     }
 
@@ -171,7 +178,7 @@ const Buttons = styled.div`
         background-color: transparent;
         margin-left: 0.5rem;
         border: none;
-        color: #01be96;
+        color: #db7093;
         cursor: pointer;
         font-size: 1.1rem;
     }

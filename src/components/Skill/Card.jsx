@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components';
 
 const Card = (props) => {
-    const { Icon, disc, title } = props;
+    const { Icon, title, text } = props;
   return (
     <Container>
         <span className='green'><Icon/></span>
         <h1>{title}</h1>
-        <p>{disc}</p>
+        <p>{text}</p>
     </Container>
   )
 }
@@ -28,7 +28,27 @@ const Container = styled.div`
         padding-bottom: 1rem;
     }
 
-    p{
-        font-size: 0.8rem;
+    ul{
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        li{
+            font-size: 0.8rem;
+            border-radius: 8px;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+            background: rgba(255, 255, 255, 0.2);
+            }
+        }
     }
 `

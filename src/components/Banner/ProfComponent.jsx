@@ -1,11 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { FaGithub } from "react-icons/fa";
-import { FaAngellist } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { BsMedium } from "react-icons/bs";
-import { Slide } from "react-awesome-reveal";
+/* eslint-disable arrow-body-style */
+/* eslint-disable react/jsx-indent */
+/* eslint-disable react/jsx-no-target-blank */
+import React from 'react';
+import styled from 'styled-components';
+import {
+  FaGithub, FaAngellist, FaTwitter, FaLinkedinIn,
+} from 'react-icons/fa';
+import { BsMedium } from 'react-icons/bs';
+import { Slide } from 'react-awesome-reveal';
 import profile from '../../assets/selma.png';
 
 const ProfComponent = () => {
@@ -14,43 +16,45 @@ const ProfComponent = () => {
       <Slide direction="left">
         <Texts>
           <h4>
-            Hello <span className="green">I'am</span>
+            Hello
+            <span className="green"> I &apos;am</span>
           </h4>
           <h1 className="green">Selma Hamutenya</h1>
           <h3>Full-stack Developer</h3>
           <p>
-          A Full-stack Developer from Namibia with 3+ years of hands-on experience designing, developing, 
-          and implementing applications and solutions using a range of technologies and 
+          A Full-stack Developer from Namibia with 3+ years of hands-on experience designing,
+          developing, and implementing applications and solutions using a range of technologies and
           programming languages. I have a deep appreciation for clean code, test-driven development,
-          and mentorship. I can help you build a product, feature, or a website. Look through some 
-          of my work and experience! If you have a project that needs coding, dont hesitate to contact me.
+          and mentorship. I can help you build a product, feature, or a website. Look through some
+          of my work and experience! If you have a project that needs coding, dont hesitate to
+          contact me.
           </p>
-          <button>Let's talk</button>
+          <button type="button">Let&apos;s talk</button>
           <Social>
             <p>Check out my</p>
             <div className="social-icons">
               <span>
-                <a href="https://www.linkedin.com/in/selma-hamutenya/">
+                <a href="https://www.linkedin.com/in/selma-hamutenya/" target="_blank">
                   <FaLinkedinIn />
                 </a>
               </span>
               <span>
-                <a href="https://github.com/SelmaNdapanda">
+                <a href="https://github.com/SelmaNdapanda" target="_blank">
                   <FaGithub />
                 </a>
               </span>
               <span>
-                <a href="https://wellfound.com/u/selma-hamutenya">
+                <a href="https://wellfound.com/u/selma-hamutenya" target="_blank">
                   <FaAngellist />
                 </a>
               </span>
               <span>
-                <a href="">
+                <a href="https://twitter.com/sellohBlaq" target="_blank">
                   <FaTwitter />
                 </a>
               </span>
               <span>
-                <a href="https://medium.com/@ndapanda1996">
+                <a href="https://medium.com/@ndapanda1996" target="_blank">
                   <BsMedium />
                 </a>
               </span>
@@ -162,13 +166,13 @@ const Social = styled.div`
 `;
 const Profile = styled.div`
   img {
-    width: 25rem;
-    height: 30rem;
+    width: 20rem;
+    height: 25rem;
     filter: drop-shadow(0px 10px 10px #db709270);
     transition: transform 400ms ease-in-out;
     @media (max-width: 790px) {
-      width: 20rem;
-      height: 25rem;
+      width: 15rem;
+      height: 20rem;
     }
 
     @media (max-width: 660px) {

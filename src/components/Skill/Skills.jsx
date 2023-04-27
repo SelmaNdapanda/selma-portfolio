@@ -1,7 +1,7 @@
 import React from "react";
-import { MdDesignServices } from "react-icons/md";
-import { FiCodesandbox } from "react-icons/fi";
+import { SiPytorchlightning } from "react-icons/si";
 import { CgWebsite } from "react-icons/cg";
+import { CgDatabase } from "react-icons/cg";
 import styled from "styled-components";
 import Card from "./Card";
 import { Slide } from "react-awesome-reveal";
@@ -18,26 +18,55 @@ const Skills = () => {
       <Cards>
         <Slide direction="left">
           <Card
-            Icon={MdDesignServices}
-            title={"ui/ux designer"}
-            disc={`Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Commodi et asperiores cum exercitationem officia rem amet minus magnam? Cum, voluptatem?`}
-          />
+            Icon={CgWebsite}
+            title={"Front-end"}
+            text={<ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Redux</li>
+              <li>jQuery</li>
+              <li>C#</li>
+              <li>Bootstrap</li>
+            </ul>}
+           />
         </Slide>
         <Slide direction="up">
           <Card
-            Icon={FiCodesandbox}
-            title={"graphic designer"}
-            disc={`Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Commodi et asperiores cum exercitationem officia rem amet minus magnam? Cum, voluptatem?`}
-          />
+            Icon={CgDatabase}
+            title={"Back-end and Testing"}
+            text={<ul>
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+              <li>PHP</li>
+              <li>Ruby</li>
+              <li>Rails</li>
+              <li>Capybara</li>
+              <li>Selenium</li>
+              <li>RSpec</li>
+              <li>Jest</li>
+              <li>Mocha</li>
+            </ul>}
+           />
         </Slide>
         <Slide direction="right">
           <Card
-            Icon={CgWebsite}
-            title={"web designer"}
-            disc={`Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Commodi et asperiores cum exercitationem officia rem amet minus magnam? Cum, voluptatem?`}
+            Icon={SiPytorchlightning}
+            title={"Other Skills"}
+            text={<ul>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Heroku</li>
+              <li>Netlify</li>
+              <li>Render</li>
+              <li>TDD</li>
+              <li>Remote Pair-Programming</li>
+              <li>Teamwork</li>
+              <li>Mentoring</li>
+              <li>Code Reviewer</li>
+              <li>Dev Tools</li>
+            </ul>}
           />
         </Slide>
       </Cards>

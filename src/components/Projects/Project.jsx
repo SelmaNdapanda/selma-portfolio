@@ -2,14 +2,15 @@ import React from 'react'
 import styled from 'styled-components';
 
 const Project = (props) => {
-    const { img, disc } = props.item;
+    const { img, title, disc, live, source } = props.item;
   return (
     <Container className='project'>
         <img src={img} alt="project" />
         <div className="disc">
-            <h1>Description</h1>
+            <h1>{title}</h1>
             <p>{disc}
-            <a href="/">demo</a>
+            <a href={live} target="_blank">See Live</a>
+            <a href={source} target="_blank">See Source</a>
             </p>
         </div>
     </Container>
@@ -19,7 +20,7 @@ const Project = (props) => {
 export default Project;
 
 const Container = styled.div`
-    height: 10rem;
+    height: 12rem;
     background-color: #4e5156;
     margin: 0 0.5rem;
     padding: 0.5rem;
@@ -37,7 +38,7 @@ const Container = styled.div`
         position: absolute;
         right: 0;
         left: 0;
-        bottom: -10rem;
+        bottom: -12rem;
         text-align: left;
         padding: 0.5rem;
         background: linear-gradient(rgba(0,0,0, 0.100), rgba(0,0,0, 0.80));
@@ -50,7 +51,7 @@ const Container = styled.div`
             width: 90%;
             font-size: 0.8rem;
             a{
-                margin-left: 0.4rem;
+                margin-left: 0.8rem;
                 color: red;
             }
         }

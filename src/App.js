@@ -1,10 +1,11 @@
-import styled from "styled-components";
-import Header from "./components/Banner/Header";
-import ProfComponent from "./components/Banner/ProfComponent";
-import Clients from "./components/Clients/Clients";
-import Footer from "./components/Footer/Footer";
-import Projects from "./components/Projects/Projects";
-import Skills from "./components/Skill/Skills";
+import styled from 'styled-components';
+import Header from './components/Banner/Header';
+import ProfComponent from './components/Banner/ProfComponent';
+import Clients from './components/Clients/Clients';
+import Footer from './components/Footer/Footer';
+import Projects from './components/Projects/Projects';
+import Skills from './components/Skill/Skills';
+
 function App() {
   return (
     <Container>

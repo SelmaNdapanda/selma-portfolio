@@ -1,32 +1,35 @@
-import React, { useState } from 'react'
+/* eslint-disable no-confusing-arrow */
+/* eslint-disable spaced-comment */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable react/self-closing-comp */
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { GiCandleFlame } from "react-icons/gi";
+import { GiCandleFlame } from 'react-icons/gi';
 
 const Header = () => {
-    const [bar, setBar] = useState(false);
+  const [bar, setBar] = useState(false);
   return (
     <Container bar={bar}>
-        <Logo>
-            <span className='green'><GiCandleFlame/></span>
-            <h1>Portfolio</h1>
-        </Logo>
-        <Nav bar={bar}>
-            <span><a href="#home">Home</a></span>
-            <span><a href="#skill">Skills</a></span>
-            <span><a href="#project">Projects</a></span>
-            <span><a href="#client">Testimonials</a></span>
-            <span><a href="#footer">Portfolio</a></span>
-        </Nav>
-        <div
-        onClick={() => setBar(!bar)}
-        className="bars">
-            <div className="bar"></div>
-        </div>
+      <Logo>
+        <span className="green"><GiCandleFlame /></span>
+        <h1>Selma Hamutenya</h1>
+      </Logo>
+      <Nav bar={bar}>
+        <span><a href="#home">Home</a></span>
+        <span><a href="#skill">Skills</a></span>
+        <span><a href="#project">Projects</a></span>
+        <span><a href="#client">Testimonials</a></span>
+        <span><a href="#footer">Portfolio</a></span>
+      </Nav>
+      <div onClick={() => setBar(!bar)} className="bars">
+        <div className="bar"></div>
+      </div>
     </Container>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
 
 const Container = styled.div`
     display: flex;
@@ -58,7 +61,7 @@ const Container = styled.div`
                 position: absolute;
                 width: 100%;
                 height: 2px;
-                background-color: ${props => props.bar ? "transparent" : "#fff"};
+                background-color: ${(props) => props.bar ? 'transparent' : '#fff'};
                 transition: all 400ms ease-in-out;
                 :before, :after{
                     content: "";
@@ -69,18 +72,18 @@ const Container = styled.div`
                 }
 
                 :before{
-                    transform: ${props => props.bar ? "rotate(45deg)" : "translateY(10px)"};
+                    transform: ${(props) => props.bar ? 'rotate(45deg)' : 'translateY(10px)'};
                     transition: all 400ms ease-in-out;
                 }
 
                 :after{
-                    transform: ${props => props.bar ? "rotate(-45deg)" : "translateY(-10px)"};
+                    transform: ${(props) => props.bar ? 'rotate(-45deg)' : 'translateY(-10px)'};
                     transition: all 400ms ease-in-out;
                 }
             }
         }
     }
-`
+`;
 const Logo = styled.div`
     display: flex;
     align-items: center;
@@ -93,7 +96,7 @@ const Logo = styled.div`
         font-weight: 600;
         font-size: 1.2rem;
     }
-`
+`;
 const Nav = styled.div`
     @media(max-width:640px){
         position: fixed;
@@ -106,7 +109,7 @@ const Nav = styled.div`
         font-size: 2rem;
         gap: 2rem;
         font-weight: 700;
-        height: ${props => props.bar ? "100vh" : 0};
+        height: ${(props) => props.bar ? '100vh' : 0};
         transition: height 400ms ease-in-out;
         overflow: hidden;
         z-index: 100;
@@ -139,4 +142,4 @@ const Nav = styled.div`
             }
         }
     }
-`
+`;
