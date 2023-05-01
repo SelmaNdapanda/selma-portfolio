@@ -21,44 +21,73 @@ const ProfComponent = () => {
           <h1 className="green">Selma Hamutenya</h1>
           <h3>Full-stack Developer</h3>
           <p>
-          A Full-stack Developer from Namibia with 3+ years of hands-on experience designing,
-          developing, and implementing applications and solutions using a range of technologies and
-          programming languages. I have a deep appreciation for clean code, test-driven development,
-          and mentorship. I can help you build a product, feature, or a website. Look through some
-          of my work and experience! If you have a project that needs coding, dont hesitate to
-          contact me.
+            A Full-stack Developer from Namibia with 3+ years of hands-on
+            experience designing, developing, and implementing applications and
+            solutions using a range of technologies and programming languages. I
+            have a deep appreciation for clean code, test-driven development,
+            and mentorship. I can help you build a product, feature, or a
+            website. Look through some of my work and experience! If you have a
+            project that needs coding, dont hesitate to contact me.
           </p>
           <Cta>
-          <button type="button"><a href="#footer">Let&apos;s talk</a></button>
-          <button type="button">
-            <a href="https://docs.google.com/document/d/1YCw6oqEvIB504SXk7tJBVev3QikWxuT7EPqfJm-ZrU8/edit?usp=sharing" target="_blank" rel="noreferrer">Get Resume</a>
-          </button>
+            <button type="button">
+              <a href="#footer">Let&apos;s talk</a>
+            </button>
+            <button type="button">
+              <a
+                href="https://docs.google.com/document/d/1YCw6oqEvIB504SXk7tJBVev3QikWxuT7EPqfJm-ZrU8/edit?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Get Resume
+              </a>
+            </button>
           </Cta>
           <Social>
             <p>Check out my</p>
             <div className="social-icons">
               <span>
-                <a href="https://www.linkedin.com/in/selma-hamutenya/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/selma-hamutenya/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaLinkedinIn />
                 </a>
               </span>
               <span>
-                <a href="https://github.com/SelmaNdapanda" target="_blank" rel="noreferrer">
+                <a
+                  href="https://github.com/SelmaNdapanda"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaGithub />
                 </a>
               </span>
               <span>
-                <a href="https://wellfound.com/u/selma-hamutenya" target="_blank" rel="noreferrer">
+                <a
+                  href="https://wellfound.com/u/selma-hamutenya"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaAngellist />
                 </a>
               </span>
               <span>
-                <a href="https://twitter.com/sellohBlaq" target="_blank" rel="noreferrer">
+                <a
+                  href="https://twitter.com/sellohBlaq"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaTwitter />
                 </a>
               </span>
               <span>
-                <a href="https://medium.com/@ndapanda1996" target="_blank" rel="noreferrer">
+                <a
+                  href="https://medium.com/@ndapanda1996"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <BsMedium />
                 </a>
               </span>
@@ -68,10 +97,7 @@ const ProfComponent = () => {
       </Slide>
       <Slide direction="right">
         <Profile>
-          <img
-            src={profile}
-            alt="profile"
-          />
+          <img src={profile} alt="profile" />
         </Profile>
       </Slide>
     </Container>
@@ -127,7 +153,7 @@ const Texts = styled.div`
     :hover {
       filter: drop-shadow(0px 10px 10px #db709270);
     }
-    a{
+    a {
       color: #fff;
       text-decoration: none;
       font-weight: 500;

@@ -49,7 +49,9 @@ const Footer = () => {
               </span>
             </Slide>
             <Slide>
-              <a href="mailto:selmandapanda@yahoo.com">selmandapanda@yahoo.com</a>
+              <a href="mailto:selmandapanda@yahoo.com">
+                selmandapanda@yahoo.com
+              </a>
             </Slide>
           </div>
         </div>
@@ -60,28 +62,44 @@ const Footer = () => {
           <div className="icons">
             <Zoom>
               <span>
-                <a href="https://github.com/SelmaNdapanda" target="_blank" rel="noreferrer">
+                <a
+                  href="https://github.com/SelmaNdapanda"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <AiFillGithub />
                 </a>
               </span>
             </Zoom>
             <Zoom>
               <span>
-                <a href="https://www.linkedin.com/in/selma-hamutenya/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/selma-hamutenya/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <AiFillLinkedin />
                 </a>
               </span>
             </Zoom>
             <Zoom>
               <span>
-                <a href="https://twitter.com/sellohBlaq" target="_blank" rel="noreferrer">
+                <a
+                  href="https://twitter.com/sellohBlaq"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <BsTwitter />
                 </a>
               </span>
             </Zoom>
             <Zoom>
               <span>
-                <a href="https://app.slack.com/client/T47CT8XPG" target="_blank" rel="noreferrer">
+                <a
+                  href="https://app.slack.com/client/T47CT8XPG"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <BsSlack />
                 </a>
               </span>
@@ -101,7 +119,12 @@ const Footer = () => {
               <span>
                 <CgProfile />
               </span>
-              <input type="text" placeholder="Fullname..." maxLength={30} required />
+              <input
+                type="text"
+                placeholder="Fullname..."
+                maxLength={30}
+                required
+              />
             </div>
             <div className="email">
               <span>
@@ -113,7 +136,14 @@ const Footer = () => {
               <span className="messageIcon">
                 <FiMail />
               </span>
-              <textarea cols="30" rows="10" placeholder="Message..." maxLength={500} required></textarea>
+              <textarea
+                cols="30"
+                rows="10"
+                placeholder="Message..."
+                maxLength={500}
+                required
+              >
+              </textarea>
             </div>
             <button type="button">Submit</button>
           </form>
