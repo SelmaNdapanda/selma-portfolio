@@ -1,6 +1,5 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable react/jsx-indent */
-/* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import styled from 'styled-components';
 import {
@@ -29,32 +28,37 @@ const ProfComponent = () => {
           of my work and experience! If you have a project that needs coding, dont hesitate to
           contact me.
           </p>
-          <button type="button">Let&apos;s talk</button>
+          <Cta>
+          <button type="button"><a href="#footer">Let&apos;s talk</a></button>
+          <button type="button">
+            <a href="https://docs.google.com/document/d/1YCw6oqEvIB504SXk7tJBVev3QikWxuT7EPqfJm-ZrU8/edit?usp=sharing" target="_blank" rel="noreferrer">Get Resume</a>
+          </button>
+          </Cta>
           <Social>
             <p>Check out my</p>
             <div className="social-icons">
               <span>
-                <a href="https://www.linkedin.com/in/selma-hamutenya/" target="_blank">
+                <a href="https://www.linkedin.com/in/selma-hamutenya/" target="_blank" rel="noreferrer">
                   <FaLinkedinIn />
                 </a>
               </span>
               <span>
-                <a href="https://github.com/SelmaNdapanda" target="_blank">
+                <a href="https://github.com/SelmaNdapanda" target="_blank" rel="noreferrer">
                   <FaGithub />
                 </a>
               </span>
               <span>
-                <a href="https://wellfound.com/u/selma-hamutenya" target="_blank">
+                <a href="https://wellfound.com/u/selma-hamutenya" target="_blank" rel="noreferrer">
                   <FaAngellist />
                 </a>
               </span>
               <span>
-                <a href="https://twitter.com/sellohBlaq" target="_blank">
+                <a href="https://twitter.com/sellohBlaq" target="_blank" rel="noreferrer">
                   <FaTwitter />
                 </a>
               </span>
               <span>
-                <a href="https://medium.com/@ndapanda1996" target="_blank">
+                <a href="https://medium.com/@ndapanda1996" target="_blank" rel="noreferrer">
                   <BsMedium />
                 </a>
               </span>
@@ -119,14 +123,24 @@ const Texts = styled.div`
     cursor: pointer;
     background-color: #db7093;
     border: none;
-    color: #fff;
-    font-weight: 500;
     filter: drop-shadow(0px 10px 10px #db709251);
     :hover {
       filter: drop-shadow(0px 10px 10px #db709270);
     }
+    a{
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
   }
 `;
+
+const Cta = styled.div`
+  display: flex;
+  gap: 3rem;
+`;
+
 const Social = styled.div`
   margin-top: 3rem;
   display: flex;
