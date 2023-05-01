@@ -1,18 +1,19 @@
-import React from "react";
-import styled from "styled-components";
-import { MdAlternateEmail } from "react-icons/md";
-import { CgProfile } from "react-icons/cg";
-import { HiOutlineMailOpen } from "react-icons/hi";
-import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
-import { BsTwitter, BsSlack } from "react-icons/bs";
-import { FiMail, FiPhoneCall } from "react-icons/fi";
-import { Slide, Zoom, Fade } from "react-awesome-reveal";
+/* eslint-disable react/self-closing-comp */
+import React from 'react';
+import styled from 'styled-components';
+import { MdAlternateEmail } from 'react-icons/md';
+import { CgProfile } from 'react-icons/cg';
+import { HiOutlineMailOpen } from 'react-icons/hi';
+import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from 'react-icons/ai';
+import { BsTwitter, BsSlack } from 'react-icons/bs';
+import { FiMail, FiPhoneCall } from 'react-icons/fi';
+import { Slide, Zoom, Fade } from 'react-awesome-reveal';
 
 const Footer = () => {
   const scrollUp = () => {
     window.scroll({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
   return (
@@ -59,28 +60,28 @@ const Footer = () => {
           <div className="icons">
             <Zoom>
               <span>
-                <a href="https://github.com/SelmaNdapanda" target="_blank">
+                <a href="https://github.com/SelmaNdapanda" target="_blank" rel="noreferrer">
                   <AiFillGithub />
                 </a>
               </span>
             </Zoom>
             <Zoom>
               <span>
-                <a href="https://www.linkedin.com/in/selma-hamutenya/" target="_blank">
+                <a href="https://www.linkedin.com/in/selma-hamutenya/" target="_blank" rel="noreferrer">
                   <AiFillLinkedin />
                 </a>
               </span>
             </Zoom>
             <Zoom>
               <span>
-                <a href="https://twitter.com/sellohBlaq" target="_blank">
+                <a href="https://twitter.com/sellohBlaq" target="_blank" rel="noreferrer">
                   <BsTwitter />
                 </a>
               </span>
             </Zoom>
             <Zoom>
               <span>
-                <a href="https://app.slack.com/client/T47CT8XPG" target="_blank">
+                <a href="https://app.slack.com/client/T47CT8XPG" target="_blank" rel="noreferrer">
                   <BsSlack />
                 </a>
               </span>
@@ -100,13 +101,13 @@ const Footer = () => {
               <span>
                 <CgProfile />
               </span>
-              <input type="text" placeholder="Fullname..." maxLength={30} required/>
+              <input type="text" placeholder="Fullname..." maxLength={30} required />
             </div>
             <div className="email">
               <span>
                 <MdAlternateEmail />
               </span>
-              <input type="email" placeholder="Email..." required/>
+              <input type="email" placeholder="Email..." required />
             </div>
             <div className="message">
               <span className="messageIcon">
@@ -114,7 +115,7 @@ const Footer = () => {
               </span>
               <textarea cols="30" rows="10" placeholder="Message..." maxLength={500} required></textarea>
             </div>
-            <button>Submit</button>
+            <button type="button">Submit</button>
           </form>
         </Slide>
       </Form>
