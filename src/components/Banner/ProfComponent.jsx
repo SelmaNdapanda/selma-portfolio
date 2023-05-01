@@ -185,7 +185,7 @@ const Profile = styled.div`
     filter: drop-shadow(0px 10px 10px #db709270);
     transition: transform 400ms ease-in-out;
     @media (max-width: 790px) {
-      width: 15rem;
+      width: 5rem;
       height: 20rem;
     }
 
