@@ -23,27 +23,33 @@ let clients = [
     },
     {
         name : "Justice Bajeri",
-        position : "web developer",
-        img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
+        position : "Full-stack Developer",
+        img_url : "https://avatars.githubusercontent.com/u/107192076?v=4",
         stars : 4,
-        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+        disc : `Selma is talented and has a good appetite for acquiring knowledge. She possesses excellent coding, 
+        communication, collaboration, and pair programming skills. She is a hard-working individual who's always eager 
+        to follow best practices while implementing quality code. She has a very bright future and would definitely be
+        a valuable addition to any software development team. She would make a valuable resource for any company & I wouldn't 
+        hesitate to recommend her for any software development role.`
     },
     {
-        name : "John Michel",
-        position : "web developer",
-        img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
+        name : "Kidist Guta",
+        position : "Software Engineer",
+        img_url : "https://avatars.githubusercontent.com/u/95876178?v=4",
         stars : 5,
-        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+        disc : `I have known Selma for more than 6 months. She has been a very good mentee ever since. Selma is an amazing person, 
+        professionally and personally. I have always known her to be a very hardworking and dedicated person. In addition to her soft skills, 
+        she is a joy to work with because of her amazingly positive attitude and eagerness to learn. I would therefore highly recommend Selma
+        for any opportunities that match her skill set.`
     },
     {
-        name : "John Michel",
-        position : "web developer",
-        img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
-        stars : 5,
-        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+        name : "Amine Ouasef",
+        position : "Full-stack Developer",
+        img_url : "https://avatars.githubusercontent.com/u/104319462?v=4",
+        stars : 4,
+        disc : `Selma is a passionate coder and a warm person, she was one of the first partners I had the chance to work with,
+        and working with her is always amusing and productive. She is a good team player and will always make sure to get the job
+        done in the best way while at the same time managing her partnership perfectly, I strongly recommend her.`
     },
 ]
 var settings = {
