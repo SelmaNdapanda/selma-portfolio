@@ -4,7 +4,7 @@ import { MdAlternateEmail } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
-import { BsFacebook, BsSlack } from "react-icons/bs";
+import { BsTwitter, BsSlack } from "react-icons/bs";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
 
@@ -19,14 +19,14 @@ const Footer = () => {
     <Container id="footer">
       <Profile>
         <Slide direction="left" delay={1}>
-          <h1>Portfolio</h1>
+          <h1>Contact</h1>
         </Slide>
         <div className="address">
           <Slide direction="left">
             <h1>Address:</h1>
           </Slide>
           <Slide direction="left">
-            <p>1030 Southwood Dr San Luis Obispo, California(CA), 93401</p>
+            <p>Windhoek, Namibia</p>
           </Slide>
         </div>
         <div className="links">
@@ -38,7 +38,7 @@ const Footer = () => {
               <FiPhoneCall />
             </span>
             <Slide direction="left">
-              <a href="tel:+4733378901">+47 333 78 901</a>
+              <a href="tel:+264818001684">+264818001684</a>
             </Slide>
           </div>
           <div>
@@ -48,7 +48,7 @@ const Footer = () => {
               </span>
             </Slide>
             <Slide>
-              <a href="mailto:miladamiri@gmail.com">miladamiri@gmail.com</a>
+              <a href="mailto:selmandapanda@yahoo.com">selmandapanda@yahoo.com</a>
             </Slide>
           </div>
         </div>
@@ -59,28 +59,28 @@ const Footer = () => {
           <div className="icons">
             <Zoom>
               <span>
-                <a href="/">
+                <a href="https://github.com/SelmaNdapanda" target="_blank">
                   <AiFillGithub />
                 </a>
               </span>
             </Zoom>
             <Zoom>
               <span>
-                <a href="/">
+                <a href="https://www.linkedin.com/in/selma-hamutenya/" target="_blank">
                   <AiFillLinkedin />
                 </a>
               </span>
             </Zoom>
             <Zoom>
               <span>
-                <a href="/">
-                  <BsFacebook />
+                <a href="https://twitter.com/sellohBlaq" target="_blank">
+                  <BsTwitter />
                 </a>
               </span>
             </Zoom>
             <Zoom>
               <span>
-                <a href="/">
+                <a href="https://app.slack.com/client/T47CT8XPG" target="_blank">
                   <BsSlack />
                 </a>
               </span>
@@ -93,26 +93,26 @@ const Footer = () => {
           </ArrowUp>
         </Fade>
       </Profile>
-      <Form>
+      <Form action="https://formspree.io/f/moqzrjgq" method="POST" novalidate>
         <Slide direction="right">
           <form>
             <div className="name">
               <span>
                 <CgProfile />
               </span>
-              <input type="text" placeholder="Fullname..." />
+              <input type="text" placeholder="Fullname..." maxLength={30} required/>
             </div>
             <div className="email">
               <span>
                 <MdAlternateEmail />
               </span>
-              <input type="email" placeholder="Email..." />
+              <input type="email" placeholder="Email..." required/>
             </div>
             <div className="message">
               <span className="messageIcon">
                 <FiMail />
               </span>
-              <textarea cols="30" rows="10" placeholder="Message..."></textarea>
+              <textarea cols="30" rows="10" placeholder="Message..." maxLength={500} required></textarea>
             </div>
             <button>Submit</button>
           </form>
@@ -214,7 +214,7 @@ const Profile = styled.div`
 const ArrowUp = styled.div`
   width: 2rem;
   height: 2rem;
-  background-color: #01be96;
+  background-color: #db7093;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -270,7 +270,7 @@ const Form = styled.div`
     button {
       width: 5rem;
       height: 1.8rem;
-      background-color: #01be96;
+      background-color: #db7093;
       border: none;
       border-radius: 5px;
       filter: drop-shadow(0px 4px 5px #01be9551);
