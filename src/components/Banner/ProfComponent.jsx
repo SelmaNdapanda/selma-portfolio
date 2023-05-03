@@ -210,18 +210,6 @@ const Profile = styled.div`
     height: 25rem;
     filter: drop-shadow(0px 10px 10px #db709270);
     transition: transform 400ms ease-in-out;
-    @media (max-width: 790px) {
-      width: 5rem;
-      height: 20rem;
-    }
-
-    @media (max-width: 660px) {
-      width: 18rem;
-    }
-
-    @media (max-width: 640px) {
-      width: 100%;
-    }
   }
 
   :hover img {
