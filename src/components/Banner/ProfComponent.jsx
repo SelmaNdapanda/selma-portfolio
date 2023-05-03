@@ -16,7 +16,7 @@ const ProfComponent = () => {
         <Texts>
           <h4>
             Hello
-            <span className="green"> I &apos;am</span>
+            <span className="green"> I&apos;m</span>
           </h4>
           <h1 className="green">Selma Hamutenya</h1>
           <h3>Full-stack Developer</h3>
@@ -27,13 +27,13 @@ const ProfComponent = () => {
             have a deep appreciation for clean code, test-driven development,
             and mentorship. I can help you build a product, feature, or a
             website. Look through some of my work and experience! If you have a
-            project that needs coding, dont hesitate to contact me.
+            project that needs coding, don&apos;t hesitate to contact me.
           </p>
           <Cta>
-            <button type="button">
+            <button type="button" className="first-button">
               <a href="#footer">Let&apos;s talk</a>
             </button>
-            <button type="button">
+            <button type="button" className="sec-button">
               <a
                 href="https://docs.google.com/document/d/1YCw6oqEvIB504SXk7tJBVev3QikWxuT7EPqfJm-ZrU8/edit?usp=sharing"
                 target="_blank"
@@ -109,7 +109,7 @@ export default ProfComponent;
 const Container = styled.div`
   display: flex;
   gap: 2rem;
-  padding-top: 3rem;
+  padding-top: 9rem;
   width: 80%;
   max-width: 1280px;
   margin: 0 auto;
@@ -147,18 +147,34 @@ const Texts = styled.div`
     padding: 0.7rem 2rem;
     margin-top: 3rem;
     cursor: pointer;
-    background-color: #db7093;
     border: none;
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+  }
+
+  .first-button {
+    background-color: #db7093;
     filter: drop-shadow(0px 10px 10px #db709251);
     :hover {
       filter: drop-shadow(0px 10px 10px #db709270);
     }
     a {
       color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      position: relative;
     }
+  }
+
+  .sec-button {
+   color: #ffff;
+   filter: drop-shadow(0px 10px 10px #444444);
+   :hover {
+     filter: drop-shadow(0px 10px 10px #666666);
+   }
+   a {
+    color: #db7093;
+  }
   }
 `;
 

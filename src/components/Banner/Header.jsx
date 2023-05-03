@@ -5,16 +5,12 @@
 /* eslint-disable react/self-closing-comp */
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { GiCandleFlame } from 'react-icons/gi';
 
 const Header = () => {
   const [bar, setBar] = useState(false);
   return (
     <Container bar={bar}>
       <Logo>
-        <span className="green">
-          <GiCandleFlame />
-        </span>
         <h1>Selma Hamutenya</h1>
       </Logo>
       <Nav bar={bar}>
@@ -47,15 +43,15 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1280px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  padding: 1.5rem 0;
-  position: relative;
+  padding: 1.5rem 3rem;
+  background-color: #db7093;
+  position: fixed;
+  z-index: 100;
+  overflow: hidden;
   animation: header 500ms ease-in-out;
-  @media (max-width: 840px) {
-    width: 90%;
-  }
+  box-shadow: 0px 10px 10px #db709270;
   .bars {
     display: none;
   }
@@ -63,7 +59,7 @@ const Container = styled.div`
     .bars {
       width: 40px;
       height: 40px;
-      position: relative;
+      position: fixed;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -100,7 +96,7 @@ const Container = styled.div`
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  margin-left: 3rem;
   span {
     font-size: 1.8rem;
   }
@@ -115,17 +111,15 @@ const Nav = styled.div`
     position: fixed;
     display: flex;
     flex-direction: column;
-    background-color: #db7093;
     inset: 0;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     gap: 2rem;
+    margin-right: 2rem;
     font-weight: 700;
     height: ${(props) => (props.bar ? '100vh' : 0)};
     transition: height 400ms ease-in-out;
-    overflow: hidden;
-    z-index: 100;
   }
   span {
     margin-left: 1rem;
