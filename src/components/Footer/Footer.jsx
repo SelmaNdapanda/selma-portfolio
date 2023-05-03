@@ -1,5 +1,6 @@
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { MdAlternateEmail } from 'react-icons/md';
 import { CgProfile } from 'react-icons/cg';
@@ -16,6 +17,43 @@ const Footer = () => {
       behavior: 'smooth',
     });
   };
+  const [name, setName] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [message, setMessage] = React.useState('');
+  const [buttonLoading, setButtonLoading] = React.useState(false);
+
+  const nameHandler = (e) => {
+    setName(e.target.value);
+  };
+
+  const emailHandler = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const messageHandler = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const navigate = useNavigate();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setButtonLoading(true);
+    const response = await fetch('https://formspree.io/f/moqzrjgq', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    if (response.ok) {
+      navigate('/success');
+      setButtonLoading(false);
+    } else {
+      alert('Failed to submit form');
+    }
+  };
+
   return (
     <Container id="footer">
       <Profile>
@@ -112,17 +150,17 @@ const Footer = () => {
           </ArrowUp>
         </Fade>
       </Profile>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Slide direction="right">
-          <form target="_blank" action="https://formsubmit.co/selmandapanda@yahoo.com" method="POST">
+          <form>
             <div className="name">
               <span>
                 <CgProfile />
               </span>
               <input
                 type="text"
-                name="name"
-                className="form-control"
+                value={name}
+                onChange={nameHandler}
                 placeholder="Fullname..."
                 maxLength={30}
                 required
@@ -132,7 +170,13 @@ const Footer = () => {
               <span>
                 <MdAlternateEmail />
               </span>
-              <input type="email" className="form-control" placeholder="Email..." name="email" required />
+              <input
+                type="email"
+                value={email}
+                onChange={emailHandler}
+                placeholder="Email..."
+                required
+              />
             </div>
             <div className="message">
               <span className="messageIcon">
@@ -141,7 +185,8 @@ const Footer = () => {
               <textarea
                 cols="30"
                 rows="10"
-                name="message"
+                value={message}
+                onChange={messageHandler}
                 className="form-control"
                 placeholder="Message..."
                 maxLength={500}
@@ -149,7 +194,11 @@ const Footer = () => {
               >
               </textarea>
             </div>
-            <button type="button">Submit</button>
+            {buttonLoading ? (
+              <LoadingButton>Loading...</LoadingButton>
+            ) : (
+              <button type="button" value="Submit" />
+            )}
           </form>
         </Slide>
       </Form>
@@ -315,4 +364,17 @@ const Form = styled.div`
       }
     }
   }
+`;
+
+const LoadingButton = styled.button`
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: rgb(8, 8, 63);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px 12px 24px;
+  cursor: pointer;
 `;
