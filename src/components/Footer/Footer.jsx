@@ -112,15 +112,17 @@ const Footer = () => {
           </ArrowUp>
         </Fade>
       </Profile>
-      <Form action="https://formspree.io/f/moqzrjgq" method="POST" novalidate>
+      <Form>
         <Slide direction="right">
-          <form>
+          <form target="_blank" action="https://formsubmit.co/selmandapanda@yahoo.com" method="POST">
             <div className="name">
               <span>
                 <CgProfile />
               </span>
               <input
                 type="text"
+                name="name"
+                className="form-control"
                 placeholder="Fullname..."
                 maxLength={30}
                 required
@@ -130,7 +132,7 @@ const Footer = () => {
               <span>
                 <MdAlternateEmail />
               </span>
-              <input type="email" placeholder="Email..." required />
+              <input type="email" className="form-control" placeholder="Email..." name="email" required />
             </div>
             <div className="message">
               <span className="messageIcon">
@@ -139,6 +141,8 @@ const Footer = () => {
               <textarea
                 cols="30"
                 rows="10"
+                name="message"
+                className="form-control"
                 placeholder="Message..."
                 maxLength={500}
                 required
