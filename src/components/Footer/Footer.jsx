@@ -1,6 +1,5 @@
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { MdAlternateEmail } from 'react-icons/md';
 import { CgProfile } from 'react-icons/cg';
@@ -9,6 +8,7 @@ import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from 'react-icons/ai';
 import { BsTwitter, BsSlack } from 'react-icons/bs';
 import { FiMail, FiPhoneCall } from 'react-icons/fi';
 import { Slide, Zoom, Fade } from 'react-awesome-reveal';
+import { useForm, ValidationError } from '@formspree/react';
 
 const Footer = () => {
   const scrollUp = () => {
@@ -17,42 +17,11 @@ const Footer = () => {
       behavior: 'smooth',
     });
   };
-  const [name, setName] = React.useState('');
-  const [email, setEmail] = React.useState('');
-  const [message, setMessage] = React.useState('');
-  const [buttonLoading, setButtonLoading] = React.useState(false);
+  const [state, handleSubmit] = useForm('moqzrjgq');
 
-  const nameHandler = (e) => {
-    setName(e.target.value);
-  };
-
-  const emailHandler = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const messageHandler = (e) => {
-    setMessage(e.target.value);
-  };
-
-  const navigate = useNavigate();
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setButtonLoading(true);
-    const response = await fetch('https://formspree.io/f/moqzrjgq', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, email, message }),
-    });
-
-    if (response.ok) {
-      navigate('/success');
-      setButtonLoading(false);
-    } else {
-      alert('Failed to submit form');
-    }
-  };
+  if (state.succeeded) {
+    return <p className="success">Thanks for your submission!</p>;
+  }
 
   return (
     <Container id="footer">
@@ -150,17 +119,16 @@ const Footer = () => {
           </ArrowUp>
         </Fade>
       </Profile>
-      <Form onSubmit={handleSubmit}>
+      <Form>
         <Slide direction="right">
-          <form>
+          <form method="POST" onSubmit={handleSubmit}>
             <div className="name">
               <span>
                 <CgProfile />
               </span>
               <input
                 type="text"
-                value={name}
-                onChange={nameHandler}
+                name="name"
                 placeholder="Fullname..."
                 maxLength={30}
                 required
@@ -172,9 +140,8 @@ const Footer = () => {
               </span>
               <input
                 type="email"
-                value={email}
-                onChange={emailHandler}
-                placeholder="Email..."
+                name="email"
+                placeholder="youremail@domain.com"
                 required
               />
             </div>
@@ -185,20 +152,17 @@ const Footer = () => {
               <textarea
                 cols="30"
                 rows="10"
-                value={message}
-                onChange={messageHandler}
-                className="form-control"
+                name="message"
                 placeholder="Message..."
                 maxLength={500}
                 required
               >
               </textarea>
             </div>
-            {buttonLoading ? (
-              <LoadingButton>Loading...</LoadingButton>
-            ) : (
-              <button type="button" value="Submit" />
-            )}
+            <button type="submit" disabled={state.submitting}>
+              Submit
+            </button>
+            <ValidationError errors={state.errors} />
           </form>
         </Slide>
       </Form>
@@ -364,17 +328,13 @@ const Form = styled.div`
       }
     }
   }
-`;
 
-const LoadingButton = styled.button`
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px;
-  background-color: rgb(8, 8, 63);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 12px 25px 12px 24px;
-  cursor: pointer;
+  .success {
+    color: #db7093;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 1rem auto;
+  }
 `;
