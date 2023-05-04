@@ -20,7 +20,7 @@ const Footer = () => {
   const [state, handleSubmit] = useForm('moqzrjgq');
 
   if (state.succeeded) {
-    return <p className="success">Thanks for your submission!</p>;
+    return <p style={{ color: '#db7093', alignItems: 'center', padding: '2rem'}}>Thanks for your submission!</p>;
   }
 
   return (
@@ -327,14 +327,5 @@ const Form = styled.div`
         filter: drop-shadow(0px 6px 9px #db709551);
       }
     }
-  }
-
-  .success {
-    color: #db7093;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin: 1rem auto;
   }
 `;
