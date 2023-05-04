@@ -45,7 +45,7 @@ const Container = styled.div`
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 2rem;
   background-color: #db7093;
   position: fixed;
   z-index: 100;
@@ -59,7 +59,7 @@ const Container = styled.div`
     .bars {
       width: 40px;
       height: 40px;
-      position: fixed;
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -96,7 +96,7 @@ const Container = styled.div`
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 3rem;
+  margin-left: -1rem;
   span {
     font-size: 1.8rem;
   }
@@ -111,6 +111,8 @@ const Nav = styled.div`
     position: fixed;
     display: flex;
     flex-direction: column;
+    background-color: #db709270;
+    width: 100%;
     inset: 0;
     justify-content: center;
     align-items: center;
@@ -120,6 +122,8 @@ const Nav = styled.div`
     font-weight: 700;
     height: ${(props) => (props.bar ? '100vh' : 0)};
     transition: height 400ms ease-in-out;
+    overflow: hidden;
+    z-index: 100;
   }
   span {
     margin-left: 1rem;
